@@ -39,6 +39,7 @@ function fold(lines: Line[]): DigestRow {
     owner: last.owner,
     runs: sorted.length,
     retries: sorted.filter((l) => l.status === 'retry').length,
+    fails: sorted.filter((l) => l.status === 'fail').length,
     lastStatus: last.status,
     lastError: withError.length ? withError[withError.length - 1]!.error : null,
     firstAt: first.at,

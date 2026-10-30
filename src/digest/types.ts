@@ -8,6 +8,7 @@ export type DigestRow = {
   owner: string | null; // null in the log; views show it as `—`
   runs: number; // lines for this job
   retries: number; // lines with status `retry`
+  fails: number; // lines with status `fail`; ok lines = runs - retries - fails
   lastStatus: RunStatus;
   lastError: string | null; // the newest `error` seen for this job, if any
   firstAt: string; // `at` as written in the log, offset kept
