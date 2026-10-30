@@ -28,7 +28,31 @@ Read first: `docs/vision.md`, `docs/styleguide.md`. Decisions: `docs/adr/`.
    ```
 
 5. An issue is closed only when its "Done when" holds. If it can't hold yet, leave it open and
-   say what it waits on.
+   say what it waits on. A step that needs someone else (a reviewer's look) is done when they
+   have acted, not when you sent it.
+6. Post the closing comment before you push a commit that says `closes #n`: the push closes the
+   issue at once.
+
+## Issue shape
+
+Every issue made from a plan carries, in this order (decided 2026-10-30 by the lane owner):
+
+```
+Source: plan.md § <n>
+
+## Scope
+<what to build, from the plan's section, in the plan's words>
+
+## Done when
+<the plan's "Done when", word for word>
+
+## Blocked by
+<#n of each issue it needs, with what it needs from it; "—" if none>
+```
+
+Label: `plan:<plan name from the frontmatter>`, e.g. `plan:morning-digest`. Title: the plan
+section's name plus the route or file it is about. Note the model tier in Scope when the plan
+gives one ("cheaper model is fine").
 
 ## Skills
 
